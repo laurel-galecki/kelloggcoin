@@ -27,3 +27,10 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+
+names = ["ben", "brian","evan","anthony"]
+
+puts "#{names[0]}"
+puts "#{names[1]}"
+puts "#{names[2]}"
+puts "#{names[3]}"
