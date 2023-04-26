@@ -30,6 +30,20 @@ blockchain = [
 
 names = ["ben", "brian","evan","anthony"]
 
+ben_balance=0
+for txn in blockchain
+  if txn["to_user"]== "ben"
+    ben_balance = ben_balance + txn["amount"]
+  else 0
+  end
+  if txn["from_user"]== "ben"
+    ben_balance = ben_balance - txn["amount"]
+  else 0
+  end
+end
+
+puts ben_balance
+
 puts "#{names[0]}"
 puts "#{names[1]}"
 puts "#{names[2]}"
