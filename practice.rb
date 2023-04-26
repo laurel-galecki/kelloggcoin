@@ -42,9 +42,44 @@ for txn in blockchain
   end
 end
 
-puts ben_balance
+brian_balance=0
+for txn in blockchain
+  if txn["to_user"]== "brian"
+    brian_balance = brian_balance + txn["amount"]
+  else 0
+  end
+  if txn["from_user"]== "brian"
+    brian_balance = brian_balance - txn["amount"]
+  else 0
+  end
+end
 
-puts "#{names[0]}"
-puts "#{names[1]}"
-puts "#{names[2]}"
-puts "#{names[3]}"
+evan_balance=0
+for txn in blockchain
+  if txn["to_user"]== "evan"
+    evan_balance = evan_balance + txn["amount"]
+  else 0
+  end
+  if txn["from_user"]== "evan"
+    evan_balance = evan_balance - txn["amount"]
+  else 0
+  end
+end
+
+anthony_balance=0
+for txn in blockchain
+  if txn["to_user"]== "anthony"
+    anthony_balance = anthony_balance + txn["amount"]
+  else 0
+  end
+  if txn["from_user"]== "anthony"
+    anthony_balance = anthony_balance - txn["amount"]
+  else 0
+  end
+end
+
+
+puts "#{names[0]}'s KelloggCoin balance is #{ben_balance}" .capitalize
+puts "#{names[1]}'s KelloggCoin balance is #{brian_balance}" .capitalize
+puts "#{names[2]}'s KelloggCoin balance is #{evan_balance}" .capitalize
+puts "#{names[3]}'s KelloggCoin balance is #{anthony_balance}" .capitalize
